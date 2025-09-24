@@ -1,16 +1,16 @@
 import Carousel from "../../Components/Carousel/CarouselEffect";
 import Category from "../../Components/Category/Category";
+import Layout from "../../Components/Layout/Layout";
 import Product from "../../Components/Product/Product";
-import  LayOut from '../../Components/Layout/Layout'
 
 function Landing() {
   return (
     <>
-      <LayOut>
+      <Layout />
         <Carousel />
         <Category />
         <Product />
-      </LayOut>
+      <Layout />
     </>
   );
 }
