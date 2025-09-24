@@ -1,6 +1,6 @@
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-function Layout({ children }) {
+function LayOut({ children }) {
   return (
     <>
       <Header />
@@ -10,4 +10,4 @@ function Layout({ children }) {
   );
 }
 
-export default Layout;
+export default LayOut;

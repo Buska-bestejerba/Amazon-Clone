@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, useState } from "react";
-import LayOut from "../../Components/Layout/Layout";
+import React, {useContext, useEffect, useState} from "react";
+import LayOut from "../../Components/LayOut/LayOut";
 import classes from "./Orders.module.css";
-import { db } from "../../Utility/firebase";
-import { DataContext } from "../../Components/DataProvider/DataProvider";
-import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
+import {db} from "../../Utility/firebase";
+import {DataContext} from "../../Components/DataProvider/DataProvider";
+import {collection, query, orderBy, onSnapshot} from "firebase/firestore";
 import ProductCard from "../../Components/Product/ProductCard";
-import { useLocation } from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import Loader from "../../Components/Loader/Loader";
 function Orders() {
-  const [{ user }] = useContext(DataContext);
+  const [{user}] = useContext(DataContext);
   const [orders, setOrders] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const navStateData = useLocation();
@@ -48,9 +48,7 @@ function Orders() {
           )}
           {isLoading && <Loader />}
           {orders.length === 0 && (
-            <div style={{ padding: "20px" }}>
-              you don't have any orders yet.
-            </div>
+            <div style={{padding: "20px"}}>you don't have any orders yet.</div>
           )}
           <hr />
           <br />

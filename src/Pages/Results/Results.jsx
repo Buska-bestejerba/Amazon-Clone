@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import Layout from "../../Components/Layout/Layout"; // Corrected import
-import { useParams } from "react-router-dom";
+import {useEffect, useState} from "react";
+import Layout from "../../Components/LayOut/LayOut"; // Corrected import
+import {useParams} from "react-router-dom";
 import axios from "axios";
-import { productUrl } from "../../API/endPoint";
+import {productUrl} from "../../API/endPoint";
 import ProductCard from "../../Components/Product/ProductCard";
 import classes from "./Results.module.css";
 import Loader from "../../Components/Loader/Loader";
@@ -10,7 +10,7 @@ import Loader from "../../Components/Loader/Loader";
 function Results() {
   const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const { categoryName } = useParams();
+  const {categoryName} = useParams();
 
   useEffect(() => {
     setIsLoading(true);

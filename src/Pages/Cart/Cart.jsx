@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import LayOut from "../../Components/Layout/Layout";
+import LayOut from "../../Components/LayOut/LayOut";
 import {DataContext} from "../../Components/DataProvider/DataProvider";
 import ProductCard from "../../Components/Product/ProductCard";
 import CurrencyFormat from "../../Components/CurrencyFormat/CurrencyFormat";
@@ -64,7 +64,7 @@ function Cart() {
                     <button
                       className={classes.btn}
                       onClick={() => decrement(item.id)}>
-                    <IoIosArrowDown
+                      <IoIosArrowDown
                         fontSize="large"
                         className={classes.rmCart}
                       />

@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
-import LayOut from "../../Components/Layout/Layout";
-import { useParams } from "react-router-dom";
+import {useEffect, useState} from "react";
+import LayOut from "../../Components/LayOut/LayOut";
+import {useParams} from "react-router-dom";
 import axios from "axios";
-import { productUrl } from "../../API/endPoint";
+import {productUrl} from "../../API/endPoint";
 import ProductCard from "../../Components/Product/ProductCard";
 import classes from "./ProductDetail.module.css";
 import Loader from "../../Components/Loader/Loader";
 function ProductDetail() {
   const [product, setProduct] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-  const { productId } = useParams();
+  const {productId} = useParams();
   useEffect(() => {
     setIsLoading(true);
     axios
